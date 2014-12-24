@@ -63,6 +63,7 @@ angular.forEach(HGESTURES, function(eventName, directiveName) {
               fn(scope, { $event : event });
             }, 0);
           };
+					hammertime.get(eventName).set(opts);
           hammertime.on(eventName, handler);
         });
         scope.$on('$destroy', function() {
